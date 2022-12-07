@@ -6,6 +6,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Profile from "./Pages/Profile";
 import ErrorPage from "./Pages/ErrorPage";
+import NavBar from "./Componentes/NavBar";
 
 function App() {
   useEffect(() => {
@@ -21,11 +22,7 @@ function App() {
 
   return (
     <Router>
-      <nav>
-        <Link to={"/"}>Home Page</Link>
-        <Link to={"/about"}>About Page</Link>
-        <Link to={"/profile"}>Profile Page</Link>
-      </nav>
+      <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
